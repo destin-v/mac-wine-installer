@@ -1,0 +1,46 @@
+{
+    "comments.Description": "VsCode Python",
+    "comments.Author": "William Li",
+    "comments.Date": "Sep-08-2023",
+    "___________________________DocString___________________________": "",
+    "autoDocstring.docstringFormat": "google",
+    "autoDocstring.generateDocstringOnEnter": true,
+    "autoDocstring.guessTypes": true,
+    "autoDocstring.includeExtendedSummary": false,
+    "___________________________Fonts___________________________": "",
+    "debug.console.fontSize": 11.5,
+    "editor.fontSize": 11.5,
+    "editor.formatOnSave": true,
+    "terminal.integrated.fontSize": 11.5,
+    "markdown.preview.fontSize": 14.5,
+    "___________________________Rulers___________________________": "",
+    "editor.rulers": [
+        100
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "___________________________Configs___________________________": "",
+    "python.envFile": "${workspaceFolder}/.vscode/.env",
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "___________________________Plugins___________________________": "",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.languageServer": "Pylance",
+    "___________________________Linting___________________________": "",
+    "___________________________Testing___________________________": "",
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "___________________________Themes___________________________": "",
+    "workbench.colorTheme": "Visual Studio Light",
+    "___________________________Misc___________________________": "",
+    "files.exclude": {
+        "**/.DS_Store": true,
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+}
