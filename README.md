@@ -2,7 +2,7 @@
 Instructions for setting up Wine on Mac OS Ventura.  Wine is a piece of software that translates Windows calls into POSIX compliant calls making it possible to run Windows software on Linux and Mac systems.  Note that Wine is not a virtual machine which spawns a new operating system.  The Wine translation software allows you to run Windows executable natively on your native Linux or Mac OS.
 
 # Automatic Installation
-A script has been provided to install the Wine software for Mac OS.  You will need a virtual environment with Python 3.7 or higher to run the script.  This has been tested on Mac OS Ventura and works.
+A script has been provided to install the Wine software for Mac OS.  You will need a virtual environment with Python 3.9 or higher to run the script.  This has been tested on Mac OS Ventura and works.
 
 ```bash
 conda create -n mac_wine_installer python=3.9
