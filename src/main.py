@@ -1,13 +1,12 @@
-import typer
-from typing_extensions import Annotated
-
-import os
 import datetime
+import os.path
+import subprocess
+
+import typer
 from rich import print
 from rich.console import Console
 from rich.panel import Panel
-import subprocess
-import os.path
+from typing_extensions import Annotated
 
 
 # Tagging tools
