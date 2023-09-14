@@ -7,6 +7,7 @@ A script has been provided to install the Wine software for Mac OS.  You will ne
 ```bash
 conda create -n mac_wine_installer python=3.7
 conda activate mac_wine_installer
+git clone https://github.com/destin-v/mac-wine-installer.git
 poetry install
 python src/main.py --help   # use to show commands
 python src/main.py          # run with all default options
