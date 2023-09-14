@@ -5,7 +5,7 @@ Instructions for setting up Wine on Mac OS Ventura.  Wine is a piece of software
 A script has been provided to install the Wine software for Mac OS.  You will need a virtual environment with Python 3.7 or higher to run the script.  This has been tested on Mac OS Ventura and works.
 
 ```bash
-conda create -n mac_wine_installer python=3.7
+conda create -n mac_wine_installer python=3.9
 conda activate mac_wine_installer
 git clone https://github.com/destin-v/mac-wine-installer.git
 poetry install
