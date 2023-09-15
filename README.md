@@ -13,6 +13,13 @@ python src/main.py --help   # use to show commands
 python src/main.py          # run with all default options
 ```
 
+<figure>
+    <p align="center">
+    <img src="docs/demo.gif" alt="drawing" width="1100"/>
+    </p>
+  <figcaption align = "center"><b>Wine configuration menu.</b></figcaption>
+</figure>
+
 # Manual Installation
 1) Install [Homebrew](https://brew.sh).
    ```bash
