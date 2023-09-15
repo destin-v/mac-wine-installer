@@ -23,6 +23,10 @@ app = typer.Typer(rich_markup_mode="markdown")
     epilog="Author: William Li :sunglasses:",
 )
 def setup(
+    uninstall: Annotated[
+        bool,
+        typer.Option(help="uninstall wine"),
+    ] = False,
     homebrew: Annotated[
         bool,
         typer.Option(help="install homebrew if not installed"),
@@ -40,6 +44,11 @@ def setup(
         typer.Option(help="open wine config"),
     ] = True,
 ):
+    # Uninstaller
+    if uninstall:
+        uninstall_wine()
+        return
+
     # Installer
     if homebrew:
         install_homebrew()
@@ -54,11 +63,7 @@ def setup(
         config_wine()
 
     # Printout
-    print(
-        Panel(
-            "[green]To install a windows application run: \n[bold black]$ wine64 <windows_executable_setup.exe>"
-        )
-    )
+    print(Panel("[green]To install a windows application run: \n[bold black]$ wine64 <*.exe>"))
 
 
 def check_func(command) -> bool:
@@ -69,6 +74,12 @@ def check_func(command) -> bool:
         return False
     else:
         return True
+
+
+def uninstall_wine() -> None:
+    run_in_terminal(["brew", "uninstall", "--cask", "wine-devel"])
+    run_in_terminal(["rm", "-rf", "$HOME/.wine"])
+    print(":party_popper: [green]Uninstalled wine")
 
 
 def install_homebrew() -> None:
