@@ -70,7 +70,10 @@ def check_func(command) -> bool:
     check = subprocess.run(["which", command], capture_output=True, text=True)
     output = check.stdout
 
-    if "not found" in output:
+    check1 = "not found" in output
+    check2 = output is ""
+
+    if check1 or check2:
         return False
     else:
         return True
@@ -79,7 +82,7 @@ def check_func(command) -> bool:
 def uninstall_wine() -> None:
     run_in_terminal(["brew", "uninstall", "--cask", "wine-devel"])
     run_in_terminal(["rm", "-rf", "$HOME/.wine"])
-    print(":party_popper: [green]Uninstalled wine")
+    print(":party_popper: [green]Uninstalled wine.")
 
 
 def install_homebrew() -> None:
@@ -92,7 +95,7 @@ def install_homebrew() -> None:
             [
                 "/bin/bash",
                 "-c",
-                '"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"',
+                "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)",
             ]
         )
 
@@ -108,7 +111,7 @@ def install_xquartz() -> None:
         return
     else:
         print(":boom: [orange]xQuartz not installed, beginning install...")
-        run_in_terminal(["brew", "install", "––cask", "xquartz"])
+        run_in_terminal(["brew", "install", "--cask", "xquartz"])
 
 
 def install_wine() -> None:
