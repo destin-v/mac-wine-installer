@@ -71,7 +71,7 @@ def check_func(command) -> bool:
     output = check.stdout
 
     check1 = "not found" in output
-    check2 = output is ""
+    check2 = output == ""
 
     if check1 or check2:
         return False
@@ -94,10 +94,11 @@ def install_homebrew() -> None:
         run_in_terminal(
             [
                 "/bin/bash",
-                "-c",
-                "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)",
+                "src/scripts/install_homebrew.sh",
             ]
         )
+
+        raise ValueError("Ensure that Homebrew is properly setup with your shell and re-run installer.")
 
 
 def update_homebrew() -> None:
