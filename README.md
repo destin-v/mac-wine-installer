@@ -8,7 +8,7 @@
 # 📒 Description
 <figure>
     <p align="center">
-    <img src="docs/pics/program_logo.png" alt="drawing" width="300"/>
+    <img src="docs/pics/program_logo.png" alt="drawing" width="350"/>
     </p>
   <figcaption align = "center"></figcaption>
 </figure>
