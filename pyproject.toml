@@ -41,13 +41,12 @@ description = "Setup Wine Mac OS (Ventura)."
 authors = ["William Li <william.li1@me.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "mac_wine_installer"}]
 
 [tool.poetry.scripts]
 main = "src.main:app"
 
 [tool.poetry.dependencies]
-python = ">=3.7"
+python = ">=3.10"
 typer = {extras = ["all"], version = "^0.9.0"}
 
 [tool.poetry.group.dev.dependencies]
@@ -55,7 +54,7 @@ black = "*"
 coverage = "*"
 mypy = "*"
 nox = "*"
-pdoc3 = "*"
+pdoc = "*"
 pre-commit = "*"
 pytest = "*"
 scalene = "*"
