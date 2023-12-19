@@ -15,12 +15,15 @@ userid = os.getenv("USER")
 
 # Typer application CLI
 console = Console()
-app = typer.Typer(rich_markup_mode="markdown")
+app = typer.Typer(
+    context_settings={"help_option_names": ["-h", "--help"]},
+    rich_markup_mode="markdown",
+    epilog="Author: William Li :sunglasses:",
+)
 
 
 @app.command(
     help=":mountain: **Setup** Wine for Mac OS.",
-    epilog="Author: William Li :sunglasses:",
 )
 def setup(
     uninstall: Annotated[
