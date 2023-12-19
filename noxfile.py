@@ -3,72 +3,51 @@ Nox creates a new virtual environment for each individual test.  Thus, it is imp
 
 Useful commands:
 
-# Lists out all the available sessions
-> nox --list
+```console
+nox --list              # Lists out all the available sessions
+nox -s pytest           # Run pytests
+nox -s coverage         # Run coverage
+nox -s profile          # Profile the code
+nox -s autodoc          # Generate documentation
 
-# Runs the session for pytest
-> nox -s pytest
+nox                     # Run all sessions
+```
 
 """
 import nox
 
+from src.ci.utils import autodoc as ci_autodoc
+from src.ci.utils import coverage as ci_coverage
+from src.ci.utils import profile as ci_profile
 
-@nox.session
+
+@nox.session(python=["3.10"])
 def pytest(session):
     """Run PyTests."""
 
-    session.run("poetry", "install")
-    session.install("pytest")
+    session.run("poetry", "install", "--with=dev", external=True)
     session.run("pytest", "-v")
-
-
-@nox.session
-def flake8(session):
-    """Lint checking."""
-
-    session.install("flake8")
-    session.run("flake8")
-
-
-@nox.session
-def black(session):
-    """Format with Black."""
-    session.install("black")
-    session.run("black")
 
 
 @nox.session
 def coverage(session):
     """Runs coverage pytests"""
 
-    session.run("poetry", "install")
-    session.run("coverage", "run", "-m", "pytest")
-    session.run("coverage", "html", "-d", "save/coverage")
-    session.run("coverage", "report", "-m")
+    session.run("poetry", "install", "--with=dev", external=True)
+    ci_coverage()
 
 
 @nox.session
 def profile(session):
     """Profiles your selected code using scalene."""
 
-    session.run("poetry", "install")
-
-    session.run(
-        "scalene",
-        "--outfile",
-        "save/profile.html",
-        "--html",
-        "main.py",
-        env={
-            "LINES": "25",
-            "COLUMNS": "200",
-        },
-    )
+    session.run("poetry", "install", "--with=dev", external=True)
+    ci_profile()
 
 
 @nox.session
-def documentation(session):
-    """Generate automatic documentation."""
+def autodoc(session):
+    """Generate pdocs."""
 
-    session.run("poetry", "install")
-    session.run("pdoc3", "--html", "src")
+    session.run("poetry", "install", "--with=dev", external=True)
+    ci_autodoc()
