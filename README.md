@@ -1,8 +1,7 @@
 <figure>
     <p align="center">
-    <img src="docs/pics/logo.gif" alt="drawing" width="600"/>
+    <img src="https://drive.google.com/uc?export=view&id=1yFte-RASCcF1ahkYg1Jybavi-gWje8kp" alt="drawing" width="600"/>
     </p>
-  <figcaption align = "center"></figcaption>
 </figure>
 
 # 📒 Description
@@ -10,7 +9,6 @@
     <p align="center">
     <img src="docs/pics/program_logo.png" alt="drawing" width="350"/>
     </p>
-  <figcaption align = "center"></figcaption>
 </figure>
 
 Instructions for setting up Wine on Mac OS Ventura.  Wine is a piece of software that translates Windows calls into POSIX compliant calls making it possible to run Windows software on Linux and Mac systems.  Note that Wine is not a virtual machine which spawns a new operating system.  The Wine translation software allows you to run Windows executable natively on your native Linux or Mac OS.
@@ -32,8 +30,11 @@ python src/main.py          # run with all default options
     <p align="center">
     <img src="docs/pics/demo.gif" alt="drawing" width="1100"/>
     </p>
-  <figcaption align = "center"><b>Wine configuration menu.</b></figcaption>
 </figure>
+
+<p align="center">
+<b>The CLI automatic installer should be your first choice.</b>
+</p>
 
 # 👨‍💻 Manual Installation
 1. Install [Homebrew](https://brew.sh).
@@ -67,8 +68,11 @@ wine64 winecfg  # here we assume you are on the 64-bit architecture
     <p align="center">
     <img src="docs/pics/winecfg.png" alt="drawing" width="500"/>
     </p>
-  <figcaption align = "center"><b>Wine configuration menu.</b></figcaption>
 </figure>
+
+<p align="center">
+<b>The WineCfg will show up when you successfully install.</b>
+</p>
 
 # 💻 Install Windows Application
 Search through the [Wine Application Database](https://appdb.winehq.org) for the Windows software you are trying to use.  If it is not listed here, it may not work.  Wine cannot translate all Windows calls into POSIX compliant calls.  Thus, some software will not work!
