@@ -1,15 +1,25 @@
-<figure>
-    <p align="center">
-    <img src="https://drive.google.com/uc?export=view&id=1yFte-RASCcF1ahkYg1Jybavi-gWje8kp" alt="drawing" width="600"/>
-    </p>
-</figure>
+<p align="center">
+  <a href="https://github.com/destin-v">
+    <img src="https://drive.google.com/uc?export=view&id=1yFte-RASCcF1ahkYg1Jybavi-gWje8kp" alt="drawing" width="500"/>
+  </a>
+</p>
 
 # 📒 Description
-<figure>
-    <p align="center">
-    <img src="docs/pics/program_logo.png" alt="drawing" width="350"/>
-    </p>
-</figure>
+<p align="center">
+  <img src="docs/pics/program_logo.png" alt="drawing" width="350"/>
+</p>
+
+<p align="center">
+  <a href="https://devguide.python.org/versions/">              <img alt="" src="https://img.shields.io/badge/python-3.10|3.11|3.12-blue?logo=python&logoColor=white"></a>
+  <a href="https://docs.github.com/en/actions/quickstart">      <img alt="" src="https://img.shields.io/badge/CI-github-blue?logo=github&logoColor=white"></a>
+  <a href="https://black.readthedocs.io/en/stable/index.html">  <img alt="" src="https://img.shields.io/badge/code%20style-black-blue"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/destin-v/mac-wine-installer/actions/workflows/pre-commit.yml">  <img alt="pre-commit" src="https://github.com/destin-v/mac-wine-installer/actions/workflows/pre-commit.yml/badge.svg"></a>
+  <a href="https://destin-v.github.io/mac-wine-installer/src.html">                           <img alt="pdoc" src="https://github.com/destin-v/mac-wine-installer/actions/workflows/pdoc.yml/badge.svg"></a>
+  <a href="https://github.com/destin-v/mac-wine-installer/actions/workflows/pytest.yml">      <img alt="pytest" src="https://github.com/destin-v/mac-wine-installer/actions/workflows/pytest.yml/badge.svg"></a>
+</p>
 
 Instructions for setting up Wine on Mac OS Ventura.  Wine is a piece of software that translates Windows calls into POSIX compliant calls making it possible to run Windows software on Linux and Mac systems.  Note that Wine is not a virtual machine which spawns a new operating system.  The Wine translation software allows you to run Windows executable natively on your native Linux or Mac OS.
 
